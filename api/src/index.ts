@@ -13,6 +13,10 @@ app.get("/api/goodbye", (req, res) => {
     res.json({ message: "Goodbye from Express!" });
     });
 
+app.get("/api/date", (req, res) => {
+    res.json({ message: new Date() });
+    });
+
 const port = process.env.PORT || 8000;
 
 app.listen(port, () => {
